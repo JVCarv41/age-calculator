@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
-  background-image: url("Images\\time-background.png");
+  background-image: url("Assets/Images/time-background.png");
   margin: 0;
   padding: 0;
   display: flex;
