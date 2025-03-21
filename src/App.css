@@ -38,11 +38,19 @@ label {
   color: #dadada;
 }
 
-input {
+.date-inputs {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.date-inputs input {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 30%;
+  text-align: center;
 }
 
 button {
@@ -83,5 +91,9 @@ button:hover {
   input,
   button {
     font-size: 0.9rem;
+  }
+
+  .date-inputs input {
+    width: 25%;
   }
 }

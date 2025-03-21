@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [birthdate, setBirthdate] = useState("");
+  const [day, setDay] = useState("");
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
   const [age, setAge] = useState({ years: 0, months: 0, days: 0 });
-
+  const min_year = 1900;
   const calculateAge = () => {
     const today = new Date();
-    const birthDate = new Date(birthdate);
+    const birthDate = new Date(`${year}-${month}-${day}`);
 
     if (isNaN(birthDate.getTime())) {
-      alert("Please enter a valid date.");
+      alert("Por favor, insira uma data válida.");
       return;
     }
-
     let years = today.getFullYear() - birthDate.getFullYear();
     let months = today.getMonth() - birthDate.getMonth();
     let days = today.getDate() - birthDate.getDate();
@@ -36,23 +37,43 @@ function App() {
       <h1>Calculador de Idade</h1>
       <div className="calculator">
         <label htmlFor="birthdate">Insira sua data de Nascimento:</label>
-        <input
-          type="date"
-          id="birthdate"
-          value={birthdate}
-          onChange={(e) => setBirthdate(e.target.value)}
-        />
+        <div className="date-inputs">
+          <input
+            type="number"
+            placeholder="Dia"
+            value={day}
+            onChange={(e) => setDay(e.target.value)}
+            min="1"
+            max="31"
+          />
+          <input
+            type="number"
+            placeholder="Mês"
+            value={month}
+            onChange={(e) => setMonth(e.target.value)}
+            min="1"
+            max="12"
+          />
+          <input
+            type="number"
+            placeholder="Ano"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+            min={min_year}
+            max={new Date().getFullYear()}
+          />
+        </div>
         <button onClick={calculateAge}>Calcular Idade</button>
       </div>
-      {
+      {age.years >= 0 && (
         <div className="result">
           <p>
             Sua idade é: <strong>{age.years}</strong> anos,{" "}
-            <strong>{age.months}</strong> meses e <strong>{age.days}</strong>{" "}
-            dias.
+            <strong>{age.months}</strong> meses e{" "}
+            <strong>{age.days}</strong> dias.
           </p>
         </div>
-      }
+      )}
     </div>
   );
 }
