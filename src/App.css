@@ -1,38 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  background-image: url("C:\Users\jvfcs\VS-Code Workspace\FullStack\Atividades\Unidade 1\age-calculator\public\Images\time-background.png");
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
+  background: #1e1e1e;
+  opacity: 90%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #dadada;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #dadada;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #663399;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #48256b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.result {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #dadada;
+}
+
+.result strong {
+  color: #663399;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .App {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  button {
+    font-size: 0.9rem;
   }
 }
