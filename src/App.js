@@ -67,11 +67,21 @@ function App() {
       </div>
       {age.years >= 0 && (
         <div className="result">
-          <p>
-            Sua idade é: <strong>{age.years}</strong> anos,{" "}
-            <strong>{age.months}</strong> meses e{" "}
-            <strong>{age.days}</strong> dias.
-          </p>
+          <p>Sua idade é:</p>
+          <div className="age">
+            <p>
+              {" "}
+              <strong>{age.years}</strong> anos,{" "}
+            </p>
+            <p>
+              {" "}
+              <strong>{age.months}</strong> meses e{" "}
+            </p>
+            <p>
+              {" "}
+              <strong>{age.days}</strong> dias.{" "}
+            </p>
+          </div>
         </div>
       )}
     </div>

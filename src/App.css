@@ -70,12 +70,21 @@ button:hover {
 
 .result {
   margin-top: 1.5rem;
-  font-size: 1.1rem;
+  text-align: center;
   color: #dadada;
 }
 
-.result strong {
+.age {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.age strong {
+  font-weight: 1000;
   color: #663399;
+  font-style: italic;
 }
 
 /* Responsive Design */
