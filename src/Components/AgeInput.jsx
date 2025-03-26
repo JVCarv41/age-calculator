@@ -3,7 +3,7 @@ import React from "react";
 const AgeInput = ({ day, month, year, min_year, onDayChange, onMonthChange, onYearChange, onCalculate }) => {
   return (
     <div className="calculator">
-      <label htmlFor="birthdate">Insira sua data de Nascimento:</label>
+      <label htmlFor="birthdate">Insira sua data de nascimento:</label>
       <div className="date-inputs">
         <input
           type="number"
