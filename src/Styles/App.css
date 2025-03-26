@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  background-image: url("../Assets/Images/time-background.png");
+  /* background-color: #f4f4f9; */
+  background-image: url("../Assets/Images/space-background.jpg");
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,7 +12,7 @@ body {
 
 .App {
   text-align: center;
-  background: #1e1e1e;
+  background: #dadada;
   opacity: 90%;
   padding: 2rem;
   border-radius: 10px;
@@ -23,7 +23,7 @@ body {
 h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #dadada;
+  color: #1e1e1e;
 }
 
 .calculator {
@@ -55,7 +55,8 @@ label {
 button {
   padding: 0.75rem;
   font-size: 1rem;
-  background-color: #663399;
+  background-color: #1e1e1e;
+  /* background-color: #663399; */
   color: white;
   border: none;
   border-radius: 5px;
@@ -64,13 +65,13 @@ button {
 }
 
 button:hover {
-  background-color: #48256b;
+  background-color: #101010;
 }
 
 .result {
   margin-top: 1.5rem;
   text-align: center;
-  color: #dadada;
+  color: #1e1e1e;
 }
 
 .age {
@@ -82,7 +83,7 @@ button:hover {
 }
 .age strong {
   font-weight: 1000;
-  color: #663399;
+  color: #000000;
   font-style: italic;
 }
 
