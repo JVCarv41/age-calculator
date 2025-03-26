@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
-  background-image: url("Assets/Images/time-background.png");
+  background-image: url("../Assets/Images/time-background.png");
   margin: 0;
   padding: 0;
   display: flex;
@@ -18,7 +18,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  width: 100%;
 }
 
 h1 {
