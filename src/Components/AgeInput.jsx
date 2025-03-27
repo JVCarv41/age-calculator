@@ -1,6 +1,6 @@
 import React from "react";
 
-const AgeInput = ({ day, month, year, min_year, onDayChange, onMonthChange, onYearChange, onCalculate }) => {
+const AgeInput = ({ day, month, year, min_year,max_year, onDayChange, onMonthChange, onYearChange, onCalculate }) => {
   return (
     <div className="calculator">
       <label htmlFor="birthdate">Insira sua data de nascimento:</label>
@@ -27,7 +27,7 @@ const AgeInput = ({ day, month, year, min_year, onDayChange, onMonthChange, onYe
           value={year}
           onChange={onYearChange}
           min={min_year}
-          max={new Date().getFullYear()}
+          max={max_year}
         />
       </div>
       <button onClick={onCalculate}>Calcular Idade</button>
