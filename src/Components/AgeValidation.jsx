@@ -26,8 +26,12 @@ export const validateDate = (day, month, year, min_year, max_year) => {
       };
     }
   
+    // Ensure zero-padded month and day
+    const paddedMonth = numericMonth.toString().padStart(2, '0');
+    const paddedDay = numericDay.toString().padStart(2, '0');
+  
     // Date object validation
-    const birthDate = new Date(`${numericYear}-${numericMonth}-${numericDay}`);
+    const birthDate = new Date(`${numericYear}-${paddedMonth}-${paddedDay}`);
     if (isNaN(birthDate.getTime())) {
       return { isValid: false, error: "Data inválida. Por favor, insira uma data válida." };
     }
